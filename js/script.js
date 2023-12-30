@@ -27,11 +27,21 @@ const alertLastName = document.querySelector("#alertLastName");
 const alertupEmailExist = document.querySelector("#alertupEmailExist");
 const alertupSuccess = document.querySelector("#alertupSuccess");
 const welcomeImg = document.querySelector("#welcomeBackUserContainer img");
+const welcomeAudio = document.querySelector("#welcomeAudio");
 let users = [];
 
 signupContainer.classList.add("d-none");
 welcomeBackUserContainer.classList.add("d-none");
 logoutBtn.classList.add("d-none");
+
+// Welcome Audio
+function welcomeAudioPlay() {
+  welcomeAudio.play();
+}
+
+function welcomeAudioPause() {
+  welcomeAudio.load();
+}
 
 // Errors Handlers
 function errorRemove() {
@@ -192,6 +202,9 @@ function signin() {
        <span class="user-name">${users[i].firstName} ${users[i].lastName}</span> !`;
       welcomeImg.classList.remove('d-none');
       logoutBtn.classList.remove("d-none");
+      setTimeout(() => {
+        welcomeAudioPlay();
+      }, 500);
       return;
     }
 
@@ -232,6 +245,7 @@ function logOut() {
   signinContainer.classList.remove("d-none");
   welcomeImg.classList.add('d-none');
   logoutBtn.classList.add("d-none");
+  welcomeAudioPause();
   clearInputs();
 }
 logoutBtn.addEventListener("click", logOut);
