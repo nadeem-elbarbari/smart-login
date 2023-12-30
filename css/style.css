@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Genshin";
+  src: local("Genshin"), url("../webfonts/zh-cn.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 700px;
+  } 
+}
+
+
+body {
+  font-family: "Genshin", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to right, #3b71ca, #f80000); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#title {
+  font-family: "Genshin", sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  position: relative;
+  top: -100px;
+}
+
+h1 {
+  font-family: "Genshin", sans-serif;
+  font-size: 5rem;
+  color: #3b71ca;
+}
+
+@media screen and (max-width: 1050px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.container {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  background: repeating-conic-gradient(
+   from var(--a),  #3b71ca 0%, #3b71ca 5%, transparent 5%, transparent 40%, #3b71ca 50%
+  ) !important;
+  animation: animate 4s linear infinite;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 9999;
+}
+
+@property --a {
+  initial-value: 0deg;
+  inherits: false;
+  syntax: '<angle>';
+}
+
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: repeating-conic-gradient(
+   from var(--a),  #f80000 0%, #f80000 5%, transparent 5%, transparent 40%, #f80000 50%
+  ) !important;
+  border-radius: 10px;
+  animation: animate 4s linear infinite;
+  z-index: -2;
+  animation-delay: -1s;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  inset: 5px;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@-moz-document url-prefix() {
+  .container::after {
+    inset: 0px;
+  }
+}
+
+#welcomeBackUserContainer p {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 0.5rem #000;
+}
+
+@media screen and (max-width: 576px) {
+  #welcomeBackUserContainer p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #welcomeBackUserContainer p {
+    font-size: 3rem;
+  }
+}
+
+#welcomeBackUserContainer p span.user-name {
+  color: #fffc47;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 676px) {
+  #welcomeBackUserContainer p span.user-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #welcomeBackUserContainer p span.user-name {
+    font-size: 3rem;
+  }
+}
+
+span#alertEmail, span#alertPassword, span#alertupEmail, span#alertupPassword, span#alertupEmailExist, span#alertEmailNotExist {
+  display: block;
+  color: #f80000;
+  position: relative;
+  z-index: 1;
+  top: -15px;
+  background-color: #ffeded;
+  width: 100%;
+  text-align: center;
+}
+
+span#alertFirstName, span#alertLastName {
+  display: block;
+  color: #f80000;
+  position: relative;
+  z-index: 1;
+  top: 10px;
+  background-color: #ffeded;
+  width: 100%;
+  text-align: center;
+  
+}
