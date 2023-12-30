@@ -146,23 +146,25 @@ h1 {
 
 span#alertEmail, span#alertPassword, span#alertupEmail, span#alertupPassword, span#alertupEmailExist, span#alertEmailNotExist {
   display: block;
-  color: #f80000;
   position: relative;
   z-index: 1;
   top: -15px;
-  background-color: #ffeded;
-  width: 100%;
   text-align: center;
 }
 
 span#alertFirstName, span#alertLastName {
   display: block;
-  color: #f80000;
   position: relative;
   z-index: 1;
   top: 10px;
-  background-color: #ffeded;
-  width: 100%;
   text-align: center;
   
+}
+
+span#alertupSuccess {
+  display: block;
+  position: relative;
+  z-index: 1;
+  top: -10px;
+  text-align: center;
 }

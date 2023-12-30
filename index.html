@@ -29,15 +29,15 @@
           <input type="email" id="signinEmailInput" class="form-control" />
           <label class="form-label" for="signinEmailInput">Email address</label>
         </div>
-        <span id="alertEmail" class="d-none">Incorrect email.</span>
-        <span id="alertEmailNotExist" class="d-none">Email does not exist.</span>
+        <span id="alertEmail" class="d-none p-1 bg-danger text-white rounded-1 w-100">Incorrect email.</span>
+        <span id="alertEmailNotExist" class="d-none p-1 bg-danger text-white rounded-1 w-100">Email does not exist.</span>
 
         <!-- Password input -->
         <div data-mdb-input-init class="form-outline mb-4">
           <input type="password" id="signinPasswordInput" class="form-control" />
           <label class="form-label" for="signinPasswordInput">Password</label>
         </div>
-        <span id="alertPassword" class="d-none">Incorrect password.</span>
+        <span id="alertPassword" class="d-none p-1 bg-danger text-white rounded-1 w-100">Incorrect password.</span>
         <!-- Submit button -->
         <button
           data-mdb-ripple-init
@@ -67,14 +67,14 @@
               <input type="text" id="signupFirstNameInput" class="form-control" />
               <label class="form-label" for="signupFirstNameInput">First name</label>
             </div>
-              <span id="alertFirstName" class="d-none">Please enter your first name.</span>
+              <span id="alertFirstName" class="d-none p-1 bg-danger text-white rounded-1 w-100">Please enter your first name.</span>
           </div>
           <div class="col">
             <div data-mdb-input-init class="form-outline">
               <input type="text" id="signupLastNameInput" class="form-control" />
               <label class="form-label" for="signupLastNameInput">Last name</label>
             </div>
-              <span id="alertLastName" class="d-none">Please enter your last name.</span>
+              <span id="alertLastName" class="d-none p-1 bg-danger text-white rounded-1 w-100">Please enter your last name.</span>
           </div>
         </div>
 
@@ -83,15 +83,15 @@
           <input type="email" id="signupEmailInput" class="form-control" />
           <label class="form-label" for="signupEmailInput">Email address</label>
         </div>
-        <span id="alertupEmail" class="d-none">Please provide a valid email address.</span>
-        <span id="alertupEmailExist" class="d-none">Email already exist.</span>
+        <span id="alertupEmail" class="d-none p-1 bg-danger text-white rounded-1 w-100">Please provide a valid email address.</span>
+        <span id="alertupEmailExist" class="d-none p-1 bg-danger text-white rounded-1 w-100">Email already exist.</span>
 
         <!-- Password input -->
         <div data-mdb-input-init class="form-outline mb-4">
           <input type="password" id="signupPasswordInput" class="form-control" />
           <label class="form-label" for="signupPasswordInput">Password</label>
         </div>
-        <span id="alertupPassword" class="d-none">Please provide a valid password.</span>
+        <span id="alertupPassword" class="d-none p-1 bg-danger text-white rounded-1 w-100">Please provide a valid password.</span>
 
         <!-- Submit button -->
         <button
@@ -102,6 +102,7 @@
         >
         <i class="fa-solid fa-user-plus"></i>  Sign up
         </button>
+        <span id="alertupSuccess" class="d-none bg-success text-white rounded-1 w-100 p-1" > Account Created Successfully! </span>
         <!-- Back to login button -->
         <div class="text-center">
           <p>Already a member? <a href="#!" id="backToSigninBtn">Sign in</a></p>

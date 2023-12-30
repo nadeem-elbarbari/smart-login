@@ -25,6 +25,7 @@ const alertupPassword = document.querySelector("#alertupPassword");
 const alertFirstName = document.querySelector("#alertFirstName");
 const alertLastName = document.querySelector("#alertLastName");
 const alertupEmailExist = document.querySelector("#alertupEmailExist");
+const alertupSuccess = document.querySelector("#alertupSuccess");
 let users = [];
 
 signupContainer.classList.add("d-none");
@@ -160,7 +161,11 @@ function signUp() {
 
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
-
+  alertupSuccess.classList.remove("d-none");
+  setTimeout(() => {
+    alertupSuccess.classList.add("d-none");
+  }, 2000);
+  clearInputs();
   console.log(users);
 }
 signupBtn.addEventListener("click", signUp);
