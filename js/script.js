@@ -26,6 +26,7 @@ const alertFirstName = document.querySelector("#alertFirstName");
 const alertLastName = document.querySelector("#alertLastName");
 const alertupEmailExist = document.querySelector("#alertupEmailExist");
 const alertupSuccess = document.querySelector("#alertupSuccess");
+const welcomeImg = document.querySelector("#welcomeBackUserContainer img");
 let users = [];
 
 signupContainer.classList.add("d-none");
@@ -40,6 +41,9 @@ function errorRemove() {
   signinPasswordInput.addEventListener("input", () => {
     alertPassword.classList.add("d-none");
   });
+  signinContainer.addEventListener("input", () => {
+    alertEmailNotExist.classList.add("d-none");
+  })
   signupEmailInput.addEventListener("input", () => {
     alertupEmail.classList.add("d-none");
   });
@@ -184,7 +188,9 @@ function signin() {
       welcomeBackUserContainer.classList.remove("d-none");
       signinContainer.classList.add("d-none");
       signupContainer.classList.add("d-none");
-      welcomeBackUserContainer.innerHTML = `Welcome back, <span class="user-name">${users[i].firstName} ${users[i].lastName}</span>  !`;
+      welcomeBackUserContainer.innerHTML = `Welcome back,
+       <span class="user-name">${users[i].firstName} ${users[i].lastName}</span> !`;
+      welcomeImg.classList.remove('d-none');
       logoutBtn.classList.remove("d-none");
       return;
     }
@@ -224,6 +230,7 @@ function logOut() {
   welcomeBackUserContainer.classList.add("d-none");
   welcomeBackUserContainer.innerHTML = "";
   signinContainer.classList.remove("d-none");
+  welcomeImg.classList.add('d-none');
   logoutBtn.classList.add("d-none");
   clearInputs();
 }

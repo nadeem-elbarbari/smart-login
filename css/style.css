@@ -58,6 +58,12 @@ h1 {
   z-index: 9999;
 }
 
+@media screen and (max-width: 750px) {
+  .container {
+    width: 100%;
+  }
+}
+
 @property --a {
   initial-value: 0deg;
   inherits: false;
@@ -107,14 +113,13 @@ h1 {
 #welcomeBackUserContainer p {
   color: #ffffff;
   font-size: 5rem;
-  font-weight: 600;
   letter-spacing: 1px;
   text-shadow: 0 0 0.5rem #000;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
   #welcomeBackUserContainer p {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -126,15 +131,15 @@ h1 {
 
 #welcomeBackUserContainer p span.user-name {
   color: #fffc47;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 5rem;
   letter-spacing: 1px;
-  line-height: 1.2;
+  text-shadow: 0 0 0.5rem #000;
 }
 
-@media screen and (max-width: 676px) {
+
+@media screen and (max-width: 576px) {
   #welcomeBackUserContainer p span.user-name {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -167,4 +172,10 @@ span#alertupSuccess {
   z-index: 1;
   top: -10px;
   text-align: center;
+}
+
+#logoutBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
